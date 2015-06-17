@@ -31,7 +31,7 @@
              'highlightClass': 'answer-highlight',
              'mode': 'hottext',
              'removeHighlightSelector': '#remove_answer_highlight',
-             'hotTextContainerSelector': '#hot_selection_container',
+             'hotTextContainerSelector': '.active-hot-selection',
              'hotTextOutputContainerSelector': '#selected_answers',
              'selectionsValueSelector': 'input.selected-answer-value',
              'selectionsDisplaySelector': '.selected-answer-display'
@@ -55,7 +55,6 @@
             padding:5px;	      
         }
         .container {
-            height:300px;
             width:600px;
             float:left;
             padding:10px;	 	 
@@ -88,10 +87,7 @@
     </div>
 
     <div class="container cf">
-    
-        <input id="toggle_highlighter" type="button" value="Toggle Highlighter"></input>
-        <input id="remove_highlight" type="button" value="Remove Highlight"></input>
-               
+                   
         <input id="toggle_highlighter" type="button" value="Toggle Highlighter"></input>
         <input id="remove_highlight" type="button" value="Remove Highlight"></input>
         <form class="cf" name="application_form" id="application_form">
@@ -100,21 +96,24 @@
                 This is a test for highlighting and action highlighting items in this container will be marked for 
                 highlights and their information will be stored at some point so highlighting is persisted across page requests.
                 
+                <br />
+                <br />
                 <input id="remove_answer_highlight" type="button" value="Remove Answer Highlight"></input>
                 <div class="active-hot-selection">
                     The contents of this area are considered "active" and can be highlighted at any time.  Selections will be displayed below,
                     only the defined number of answers can be selected.
                 </div>
              </div>
+             <br />
              Selected Answers:
              <ul id="selected_answers">
                  <li class="selected-answer-item">
                      <div class="selected-answer-display"></div>
-                     <input type="hidden" class="selectable-answer-value" name="selectable_answer1"></input>
+                     <input type="hidden" class="selected-answer-value" name="ANSWERS"></input>
                  </li>
                  <li class="selected-answer-item">
                      <div class="selected-answer-display"></div>
-                     <input type="hidden" class="selectable-answer-value" name="selectable_answer2"></input>
+                     <input type="hidden" class="selected-answer-value" name="ANSWERS"></input>
                  </li>
              </ul>
         </form>
