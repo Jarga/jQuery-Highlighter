@@ -80,7 +80,12 @@
              },
              highlightSelection: function() {
                  var selection = highlight.getCurrentSelection()
-
+    	         
+                 //if nothing is selected do nothing
+                 if(selection.isCollapsed){
+                     return;
+                 }  
+                   
                  var targetRange = selection.getRangeAt(0);
 
                  if (typeof(targetRange) !== 'undefined' && !targetRange.collapsed) {
@@ -246,7 +251,10 @@
                  var highlighterToggle = false;
                  $(document).on('click', highlight.options.removeHighlightSelector, function() {
                      $('body').css('cursor', highlight.options.unhighlightCursor);
-
+                     
+                     $(document).off('mouseup.highlighter');
+                     highlighterToggle = false;   
+                     
                      $(document).off('click.highlighter');
                      $(document).on('click.highlighter', function() {
                          $('body').css('cursor', 'default');
@@ -265,7 +273,7 @@
                      highlighterToggle = !highlighterToggle;
                      if(highlighterToggle){
                          $('body').css('cursor', highlight.options.highlightCursor);
-    
+        	               
                          $(document).off('mouseup.highlighter');
                          $(document).on('mouseup.highlighter', function() {
                              try {
