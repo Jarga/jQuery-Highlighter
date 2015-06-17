@@ -1,3 +1,15 @@
+/*
+ * jQuery Highlighter Plugin
+ * https://github.com/jarga/jQuery-Highlighter
+ *
+ * Copyright 2015, Sean McAdams
+ * Originally Designed for http://www.writescore.com
+ * https://www.sean-mcadams.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
 (function($) {
      var instanceCounter = 0;
      $.highlighter = function(options) {
@@ -8,12 +20,12 @@
                  'mode': 'standard',
                  'highlightCursor': 'text',
                  'unhighlightCursor': 'pointer',
-                 'toggleHighlightSelector': '.highlighter-toggle', //In standard mode this is the selector for the highlighter toggle element
-                 'removeHighlightSelector': '.erase-highlight', //Selector for the element used to toggle the unhighlight process
-                 'hotTextContainerSelector': '.hot-text-container', //In HotText mode this is the container to toggle hot text in
-                 'hotTextOutputContainerSelector': '.hot-text-answer-container', //In HotText mode if this is populated then the highlighted content will be written to the configured value/display elements
-                 'selectionsValueSelector': '.selected-text-value', //If hotTextOutputContainerSelector is set this is the selector to the value inputs that can be used in web requests
-                 'selectionsDisplaySelector': '.selected-text-display' //If hotTextOutputContainerSelector is set this is the selector to a sibling of the selectionsValueSelector used for display purposes
+                 'toggleHighlightSelector': '.highlighter-toggle', 
+                 'removeHighlightSelector': '.erase-highlight', 
+                 'hotTextContainerSelector': '.hot-text-container',
+                 'hotTextOutputContainerSelector': '.hot-text-answer-container', 
+                 'selectionsValueSelector': '.selected-text-value', 
+                 'selectionsDisplaySelector': '.selected-text-display'
              }, options),
              getWrappingElement: function() {
                  var wrappingElement = document.createElement('span');
