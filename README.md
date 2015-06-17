@@ -1,7 +1,7 @@
 # jQuery Highlighter Plugin
 
 ## Demo
-[Demo File Upload](https://jarga.github.io/jQuery-Highlighter/)
+[Demo Highlighter](https://jarga.github.io/jQuery-Highlighter/)
 
 ## Description
 Highligther plugin used to highlight arbitrary sets of text on the screen or used to create a "Hot Text" area in which everything in the area can be highlighted by selecting a block of text

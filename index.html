@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+
+
+<!--[if lt IE 7 ]> <html lang="en" class="ie ie6 lt-ie7 lt-ie8 lt-ie9"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie ie7 lt-ie8 lt-ie9"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie ie8 lt-ie9"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie ie9 gte-ie9"> <![endif]-->
+<!--[if gt IE 9 ]> <html lang="en" class="ie gte-ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class=""><!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
+
+    <title>Write Score - Examples</title>
+    
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+    <script src="https://cdn.rawgit.com/Jarga/jQuery-Highlighter/master/jQuery.hightlighter.js"></script>
+	<script type="text/javascript">
+		(function($) {
+
+     $(document).ready(function() {
+         //Initialize highlighting processes
+         $.highlighter({
+             'toggleHighlightSelector': '#toggle_highlighter',
+             'removeHighlightSelector': '#remove_highlight'
+         });
+         $.highlighter({
+             'highlightClass': 'answer-highlight',
+             'mode': 'hottext',
+             'removeHighlightSelector': '#remove_answer_highlight',
+             'hotTextContainerSelector': '#hot_selection_container',
+             'hotTextOutputContainerSelector': '#selected_answers',
+             'selectionsValueSelector': 'input.selected-answer-value',
+             'selectionsDisplaySelector': '.selected-answer-display'
+         });
+     });
+ })(jQuery);
+	</script>
+    <style>
+        header {
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:5px;
+        }
+        .nav {
+            line-height:30px;
+            background-color:#eeeeee;
+            height:300px;
+            width:20%;
+            float:left;
+            padding:5px;	      
+        }
+        .container {
+            height:300px;
+            width:600px;
+            float:left;
+            padding:10px;	 	 
+        }
+        footer {
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+           padding:5px;	 	 
+        }
+        .highlight{
+            background-color: yellow;
+        }
+        .answer-highlight{
+            background-color: lightseagreen;
+        }
+</style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Base Template</h1>
+    </header>
+
+    
+    <div class="nav">
+        
+    </div>
+
+    <div class="container cf">
+    
+        <input id="toggle_highlighter" type="button" value="Toggle Highlighter"></input>
+        <input id="remove_highlight" type="button" value="Remove Highlight"></input>
+               
+        <input id="toggle_highlighter" type="button" value="Toggle Highlighter"></input>
+        <input id="remove_highlight" type="button" value="Remove Highlight"></input>
+        <form class="cf" name="application_form" id="application_form">
+               
+            <div class="container cf" >
+                This is a test for highlighting and action highlighting items in this container will be marked for 
+                highlights and their information will be stored at some point so highlighting is persisted across page requests.
+                
+                <input id="remove_answer_highlight" type="button" value="Remove Answer Highlight"></input>
+                <div class="active-hot-selection">
+                    The contents of this area are considered "active" and can be highlighted at any time.  Selections will be displayed below,
+                    only the defined number of answers can be selected.
+                </div>
+             </div>
+             Selected Answers:
+             <ul id="selected_answers">
+                 <li class="selected-answer-item">
+                     <div class="selected-answer-display"></div>
+                     <input type="hidden" class="selectable-answer-value" name="selectable_answer1"></input>
+                 </li>
+                 <li class="selected-answer-item">
+                     <div class="selected-answer-display"></div>
+                     <input type="hidden" class="selectable-answer-value" name="selectable_answer2"></input>
+                 </li>
+             </ul>
+        </form>
+    
+    </div>
+
+    <footer>
+
+        <div class="wrapper cf">
+
+            <div class="footer">
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
