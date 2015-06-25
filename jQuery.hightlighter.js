@@ -4,7 +4,7 @@
  *
  * Copyright 2015, Sean McAdams
  * Originally Designed for http://www.writescore.com
- * https://www.sean-mcadams.net
+ * http://www.sean-mcadams.com
  *
  * Licensed under the MIT license:
  * http://www.opensource.org/licenses/MIT
@@ -148,8 +148,8 @@
                      //remove redundant highlights
                      allSelectedHighlightNodes.forEach(function(element) {
                          var child = $(element);
-                         var text = child.text();
-                         child.replaceWith(text);
+                         var html = child.html();
+                         child.replaceWith(html);
                      }, this);
 
                      //remove unneeded end node and clean text nodes
