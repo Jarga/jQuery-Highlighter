@@ -3,7 +3,6 @@
  * https://github.com/jarga/jQuery-Highlighter
  *
  * Copyright 2015, Sean McAdams
- * Originally Designed for http://www.writescore.com
  * http://www.sean-mcadams.com
  *
  * Licensed under the MIT license:
